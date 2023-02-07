@@ -123,6 +123,7 @@ a, a:hover {
 			href="https://lumcaimeetup.github.io/"><img border="0" vspace="0" hspace="0"
 			src="https://www.swcp.com/wp-content/uploads/2021/07/transformers.gif"
 			alt="Please enable images to view this content" title="Meetup image"
+			id="meetup_imagelink"
 			width="560" style="
 			width: 100%;
 			max-width: 560px;
@@ -559,7 +560,8 @@ a, a:hover {
     
     //// Step 2.1 - Meetup title
     var meetup_title           = "Development and external validation of a PET radiomic model for prognostication of head and neck cancer"
-    var meetup_imagelink       = 'https://www.swcp.com/wp-content/uploads/2021/07/transformers.gif'
+	var meetup_websitelink     = "https://lumcaimeetup.github.io/2023/02/09/noortman-survivalprediction.html"
+    var meetup_imagelink       = 'https://github.com/lumcaimeetup/newsletter/blob/main/images/2023-02-09-wyanne-radiomics.png?raw=true'
     
     //// Step 2.2 - Meetup speaker
     var speaker_name           = 'Wyanne Noortman'
@@ -622,7 +624,9 @@ a, a:hover {
     document.getElementsByClassName('header')[0].innerText = suptitle
     document.getElementsByClassName('subheader')[0].innerText = suptitle_sub
 
-    document.getElementById('paragraph_meetupimage').children[0].href = meetup_imagelink
+	document.getElementById('meetup_imagelink').src = meetup_imagelink
+	document.getElementById('meetup_imagelink').href = meetup_websitelink
+    document.getElementById('paragraph_meetupimage').children[0].href = meetup_websitelink
     document.getElementById('paragraph_meetupimage').children[0].innerText = meetup_title
     document.getElementById('paragraph_date').children[0].innerText = formatDate(meetup_date_start)
     document.getElementById('paragraph_date').children[1].children[0].innerText = meetup_location
