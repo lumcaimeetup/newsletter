@@ -11,32 +11,38 @@
 	https://github.com/konsav/email-templates/  -->
 
 	<style>
-/* Reset styles */ 
-body { margin: 0; padding: 0; min-width: 100%; width: 100% !important; height: 100% !important;}
-body, table, td, div, p, a { -webkit-font-smoothing: antialiased; text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; line-height: 100%; }
-table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; border-spacing: 0; }
-img { border: 0; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
-#outlook a { padding: 0; }
-.ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; }
-.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+		/* Reset styles */ 
+		body { margin: 0; padding: 0; min-width: 100%; width: 100% !important; height: 100% !important;}
+		body, table, td, div, p, a { -webkit-font-smoothing: antialiased; text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; line-height: 100%; }
+		table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse !important; border-spacing: 0; }
+		img { border: 0; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+		#outlook a { padding: 0; }
+		.ReadMsgBody { width: 100%; } .ExternalClass { width: 100%; }
+		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
 
-/* Rounded corners for advanced mail clients only */ 
-@media all and (min-width: 560px) {
-	.container { border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; -khtml-border-radius: 8px;}
-}
+		/* Rounded corners for advanced mail clients only */ 
+		@media all and (min-width: 560px) {
+			.container { border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px; -khtml-border-radius: 8px;}
+		}
 
-/* Set color for auto links (addresses, dates, etc.) */ 
-a, a:hover {
-	color: #127DB3;
-}
-.footer a, .footer a:hover {
-	color: #999999;
-}
+		/* Set color for auto links (addresses, dates, etc.) */ 
+		a, a:hover {
+			color: #127DB3;
+		}
+		.footer a, .footer a:hover {
+			color: #999999;
+		}
+
+		
+
+		tr.lovelyrow:hover{
+			cursor: pointer;
+		}
 
  	</style>
 
 	<!-- MESSAGE SUBJECT -->
-	<title>AI Newsletter</title>
+	<title>CAIRELab Newsletter</title>
 
 </head>
 
@@ -124,9 +130,9 @@ a, a:hover {
 			src="https://www.swcp.com/wp-content/uploads/2021/07/transformers.gif"
 			alt="Please enable images to view this content" title="Meetup image"
 			id="meetup_imagelink"
-			width="560" style="
+			width="400" style="
 			width: 100%;
-			max-width: 560px;
+			max-width: 400px;
 			color: #000000; font-size: 13px; margin: 0; padding: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block;"/></a></td>
 	</tr>
 
@@ -301,8 +307,9 @@ a, a:hover {
             <tr>
                 <p style="color: #000000; padding-top: 25px; padding-bottom: -10px; font-family: sans-serif;font-weight: 400;font-size: 17px;">Organized By: </p>
 			</tr>
-
-			<tr>
+			
+			<!-- CEDRIC RODRIGUEZ -->
+			<tr onclick="location.href='https://www.linkedin.com/in/cedricrodriguez/'" class="lovelyrow">
 
 				<!-- LIST ITEM IMAGE -->
 				<!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2 -->
@@ -327,8 +334,8 @@ a, a:hover {
 
 			</tr>
 
-			<!-- LIST ITEM -->
-			<tr>
+			<!-- PRERAK MODY -->
+			<tr onclick="location.href='https://www.linkedin.com/in/prerakmody/'" class="lovelyrow">
 
 				<!-- LIST ITEM IMAGE -->
 				<!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2 -->
@@ -354,7 +361,7 @@ a, a:hover {
 			</tr>
 
 			<!-- LIST ITEM -->
-			<tr>
+			<tr onclick="location.href='https://www.linkedin.com/in/stephanromeyn/'" class="lovelyrow">
 
 				<!-- LIST ITEM IMAGE -->
 				<!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2 -->
@@ -550,6 +557,7 @@ a, a:hover {
 
     /// Step 1 - Default stuff, wont change often
     var link_cairelablogo       = 'https://lumcaimeetup.github.io/assets/logo.png'
+	var link_cairelabmeetupsite_notracking = 'www.lumcaimeetup.github.io'
     var link_cairelabmeetupsite = 'https://lumcaimeetup.github.io/?utm_source=newsletter&utm_medium=email&utm_campaign=WeeklyEmailList'
     var suptitle                = "Medical AI Meetup Newsletter"
     var suptitle_sub            = "Connecting researchers, practitioners and AI enthusiasts"
@@ -568,8 +576,8 @@ a, a:hover {
     var speaker_org            = 'Radiology @ LUMC'
     
     //// Step 2.3 - Meetup dates
-    var meetup_date_start      = new Date(2023,0,9,16,00,0) // in your local timezone
-    var meetup_date_end        = new Date(2023,0,9,17,00,0) // in your local timezone
+    var meetup_date_start      = new Date(2023,1,9,16,00,0) // in your local timezone # 0=January, 1=February, ...
+    var meetup_date_end        = new Date(2023,1,9,17,00,0) // in your local timezone
     var meetup_date_timezone   = 'Europe/Amsterdam' // in context of UTC i.e. Amsterdam or Central European time is UTC + 1hr
     
     //// Step 2.4 - Meetup Dates
@@ -607,7 +615,7 @@ a, a:hover {
     meetup_text_calendars     += "<br/><br/> -------- "
     meetup_text_calendars     += "<br/><br/> <b>Location</b> : " + meetup_location
     meetup_text_calendars     += "<br/><br/> <b>Online</b>   : <a href=" + meetup_online_link + ">Microsoft Teams Link</a>"
-    meetup_text_calendars     += "<br/><br/> For more information refer our website: <a href=" + link_cairelabmeetupsite + ">" + link_cairelabmeetupsite + "</a>"
+    meetup_text_calendars     += "<br/><br/> For more information refer our website: <a href=" + link_cairelabmeetupsite + ">www.lumcaimeetup.github.io</a>"
 	meetup_text_calendars     += "<br/>"
     meetup_text_calendars      = meetup_text_calendars.trim()
 
