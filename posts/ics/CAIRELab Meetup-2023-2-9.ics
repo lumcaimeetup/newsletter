@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:-//Test Cal//EN
+VERSION:2.0
+BEGIN:VEVENT
+ORGANIZER;CN=CAIRELab Medical AI Meetup:mailto:AI_Research_Meetings_LUMC@lumc.nl
+DTSTART;VALUE=DATE:2023-02-09T15:00:00.000Z
+DTEND;VALUE=DATE:2023-02-09T16:00:00.000Z
+SUMMARY:[CAIRELab Meetup] Development and external validation of a PET radiomic model for prognostication of head and neck cancer
+X-ALT-DESC;FMTTYPE=text/html:<br/><b>Development and external validation of a PET radiomic model for prognostication of head and neck cancer</b><br/><i>by Wyanne Noortman<br/> ( Radiology @ LUMC )</i><br/><br>External validation of radiomic studies is limited, although of utmost importance for the clinical implementation of radiomic models. The goal of this work is to build and externally validate a [18F]FDG PET radiomic model to predict overall survival in patients with head and neck squamous cell carcinoma (HNSCC).
+    <br/>
+	Two multicentre datasets of patients with operable HNSCC treated with neoadjuvant afatinib who underwent a baseline [18F]FDG PET/CT scan were included (EORTC 90111 trial: n=23, Unicancer Predictor trial: n=20). A Cox proportional hazards regression model using selected radiomic features and clinical characteristics (age and HPV status) was fitted on the training dataset and validated in the external validation set.<br/><br/> -------- <br/><br/> <b>Location</b> : V-01-022 (Building 3, LUMC)<br/><br/> <b>Online</b>   : <a href=https://teams.microsoft.com/l/meetup-join/19%3ameeting_YjhjMTVlMDUtY2EzYS00MjgxLTlhZDktNmMzZTA4YTEwNjEx%40thread.v2/0?context=%7b%22Tid%22%3a%22ca2a7f76-dbd7-4ec0-9108-6b3d524fb7c8%22%2c%22Oid%22%3a%22accebf82-156c-49b4-98e1-f8c21293b2d4%22%7d>Microsoft Teams Link</a><br/><br/> For more information refer our website: <a href=https://lumcaimeetup.github.io/?utm_source=newsletter&utm_medium=email&utm_campaign=WeeklyEmailList>www.lumcaimeetup.github.io</a><br/>
+LOCATION:V-01-022 (Building 3, LUMC)
+END:VEVENT
+END:VCALENDAR
