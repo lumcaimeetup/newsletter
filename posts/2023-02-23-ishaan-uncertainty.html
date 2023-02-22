@@ -613,8 +613,9 @@
     var meetup_date_end        = new Date('Feb 23 2023 17:00:00 GMT+1')
 	var meetup_code_reference  = title_short.replace(' ', '') + '-' + meetup_date_start.getFullYear() + '-' + (meetup_date_start.getMonth()+1) + '-' + meetup_date_start.getDate() + '.ics'  
 	
-    var meetup_ics_gitlink     = 'https://raw.githubusercontent.com/lumcaimeetup/newsletter/main/posts/ics/' + meetup_code_reference     
-    var meetup_ics_hardlink    = 'https://downgit.github.io/#/home?url=' + meetup_ics_gitlink
+    var meetup_ics_gitlink_cors = 'https://raw.githubusercontent.com/lumcaimeetup/newsletter/main/posts/ics/' + meetup_code_reference 
+    var meetup_ics_gitlink_nocors = 'https://github.com/lumcaimeetup/newsletter/blob/main/posts/ics/' + meetup_code_reference
+    var meetup_ics_hardlink    = 'https://downgit.github.io/#/home?url=' + meetup_ics_gitlink_nocors
     
     //// Step 2.4 - Meetup Dates
     var meetup_location        = "V-01-022 (Building 3, LUMC)"
@@ -684,7 +685,7 @@
     document.getElementById('ics_calendar').download = meetup_code_reference
 
     var request = new XMLHttpRequest();  
-    request.open('GET', meetup_ics_gitlink, true);
+    request.open('GET', meetup_ics_gitlink_cors, true);
     request.onreadystatechange = function(){
         console.log(' - [__main__] .ics status:" request.readyState: ', request.readyState)
         if (request.readyState == 4){
