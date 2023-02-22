@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:-//Test Cal//EN
+VERSION:2.0
+BEGIN:VEVENT
+ORGANIZER;CN=CAIRELab Medical AI Meetup:mailto:AI_Research_Meetings_LUMC@lumc.nl
+DTSTART;VALUE=DATE:2023-02-23T15:00:00.000Z
+DTEND;VALUE=DATE:2023-02-23T16:00:00.000Z
+SUMMARY:[CAIRELab Meetup] Influence of uncertainty estimation techniques on false-positive reduction in liver lesion detection
+X-ALT-DESC;FMTTYPE=text/html:<br/><b>Influence of uncertainty estimation techniques on false-positive reduction in liver lesion detection</b><br/><i>by Ishaan Bhat<br/> ( Image Sciences Institute @ UMC Utrecht )</i><br/><br>Deep learning techniques show success in detecting objects in medical images, but still suffer from false-positive predictions. In literature, the estimated uncertainty of the neural network output has been shown to flag incorrect predictions. 
+    <br/>
+    <br/>
+    We study the role played by features computed from neural network uncertainty estimates and shape-based features. An improvement is demonstrated in the lesion detection performance of the neural network for all uncertainty estimation methods on both abdominal MR and CT scans.<br/><br/> -------- <br/><br/> <b>Location</b> : V-01-022 (Building 3, LUMC)<br/><br/> <b>Online</b>   : <a href=https://teams.microsoft.com/l/meetup-join/19%3ameeting_NjAzOGJkNzEtMzMzMC00MjNkLThiNTQtOGY2MGM2ODUyMDJk%40thread.v2/0?context=%7b%22Tid%22%3a%22c4048c4f-dd54-4cbd-8049-5457aacd2fb8%22%2c%22Oid%22%3a%229fd77952-d6d5-4ead-adcd-6d5b3de4fbbd%22%7d>Microsoft Teams Link</a><br/><br/> For more information refer our website: <a href=https://lumcaimeetup.github.io/?utm_source=newsletter&utm_medium=email&utm_campaign=WeeklyEmailList>www.lumcaimeetup.github.io</a><br/>
+LOCATION:V-01-022 (Building 3, LUMC)
+END:VEVENT
+END:VCALENDAR

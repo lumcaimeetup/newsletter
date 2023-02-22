@@ -613,9 +613,8 @@
     var meetup_date_end        = new Date('Feb 23 2023 17:00:00 GMT+1')
 	var meetup_code_reference  = title_short.replace(' ', '') + '-' + meetup_date_start.getFullYear() + '-' + (meetup_date_start.getMonth()+1) + '-' + meetup_date_start.getDate() + '.ics'  
 	
-    var meetup_ics_gitlink     = 'https://github.com/lumcaimeetup/newsletter/blob/main/posts/ics/' + meetup_code_reference
+    var meetup_ics_gitlink     = 'https://raw.githubusercontent.com/lumcaimeetup/newsletter/main/posts/ics/' + meetup_code_reference     
     var meetup_ics_hardlink    = 'https://downgit.github.io/#/home?url=' + meetup_ics_gitlink
-    // var meetup_ics_hardlink    = '' # [NOTE: use this when creating a new link for the .ics file. 
     
     //// Step 2.4 - Meetup Dates
     var meetup_location        = "V-01-022 (Building 3, LUMC)"
@@ -641,8 +640,6 @@
     //                                              TEXT POSTPROCESSING
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     console.log(' - [__main__] meetup_date_start: ', meetup_date_start, ' || meetup_date_end: ', meetup_date_end)
-    // var meetup_date_start      = new Date(meetup_date_start.toLocaleString('en-US', { timeZone: meetup_date_timezone }))
-    // var meetup_date_end        = new Date(meetup_date_end.toLocaleString('en-US', { timeZone: meetup_date_timezone }))
 
 
     var meetup_title_calendar = "[" + title_short + "] " + meetup_title
@@ -694,24 +691,13 @@
             console.log(' - [__main__] .ics status:" request.status: ', request.status)
             if ((request.status == 404) || (request.status == 0 )) {  
                 document.getElementById('ics_calendar').href=meetup_outlook_cal_link
-                console.log(" [__ main__] meetup_ics_gitlink does not exist!");
+                console.log(" [__ main__] meetup_ics_hardlink does not exist!");
             }else{
                 document.getElementById('ics_calendar').href=meetup_ics_hardlink
             }
         }
     };
     request.send();
-
-	// if (document.getElementById('ics_calendar').download !=  meetup_code_reference){
-	// 	document.getElementById('ics_calendar').innerText = meetup_outlook_cal_text
-	// 	document.getElementById('ics_calendar').href=meetup_outlook_cal_link
-	// 	// document.getElementById('ics_calendar').download = title_short + '.ics'
-	// 	document.getElementById('ics_calendar').download = meetup_code_reference
-	// }else{
-    //     document.getElementById('ics_calendar').href=meetup_ics_hardlink
-    // }
-    
-	
 
     document.getElementById('meetup_text').innerHTML = meetup_text
     document.getElementById('paragraph_speaker').innerHTML = meetup_speaker_text
