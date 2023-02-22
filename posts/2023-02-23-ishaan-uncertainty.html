@@ -611,10 +611,11 @@
     //// Step 2.3 - Meetup dates
     var meetup_date_start      = new Date('Feb 23 2023 16:00:00 GMT+1')
     var meetup_date_end        = new Date('Feb 23 2023 17:00:00 GMT+1')
-	var meetup_code_reference  = title_short + '-' + meetup_date_start.getFullYear() + '-' + (meetup_date_start.getMonth()+1) + '-' + meetup_date_start.getDate() + '.ics'  
+	var meetup_code_reference  = title_short.replace(' ', '') + '-' + meetup_date_start.getFullYear() + '-' + (meetup_date_start.getMonth()+1) + '-' + meetup_date_start.getDate() + '.ics'  
 	
-    // var meetup_ics_hardlink    = 'https://downgit.github.io/#/home?url=https://github.com/lumcaimeetup/newsletter/blob/main/posts/ics/CAIRELab%20Meetup-2023-2-23.ics'
-    var meetup_ics_hardlink    = ''
+    var meetup_ics_gitlink     = 'https://github.com/lumcaimeetup/newsletter/blob/main/posts/ics/' + meetup_code_reference
+    var meetup_ics_hardlink    = 'https://downgit.github.io/#/home?url=' + meetup_ics_gitlink
+    // var meetup_ics_hardlink    = '' # [NOTE: use this when creating a new link for the .ics file. 
     
     //// Step 2.4 - Meetup Dates
     var meetup_location        = "V-01-022 (Building 3, LUMC)"
@@ -686,14 +687,14 @@
     document.getElementById('ics_calendar').download = meetup_code_reference
 
     var request = new XMLHttpRequest();  
-    request.open('GET', meetup_ics_hardlink, true);
+    request.open('GET', meetup_ics_gitlink, true);
     request.onreadystatechange = function(){
         console.log(' - [__main__] .ics status:" request.readyState: ', request.readyState)
         if (request.readyState == 4){
             console.log(' - [__main__] .ics status:" request.status: ', request.status)
             if ((request.status == 404) || (request.status == 0 )) {  
                 document.getElementById('ics_calendar').href=meetup_outlook_cal_link
-                console.log(" [__ main__] meetup_ics_hardlink does not exist!");
+                console.log(" [__ main__] meetup_ics_gitlink does not exist!");
             }else{
                 document.getElementById('ics_calendar').href=meetup_ics_hardlink
             }
