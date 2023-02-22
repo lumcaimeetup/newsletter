@@ -187,7 +187,7 @@
                 (
 					<a id="ics_calendar" 
 						target="_blank" rel="nofollow"
-						href="https://github.com/lumcaimeetup/newsletter/blob/main/posts/ics/CAIRELab%20Meetup-2023-2-9.ics?raw=true" download="CAIRELab Meetup-2023-2-9.ics" >
+						href="" download="" >
 							Add to Outlook   
 					</a>
                 )
@@ -609,13 +609,12 @@
     var speaker_org            = 'Image Sciences Institute @ UMC Utrecht'
     
     //// Step 2.3 - Meetup dates
-    // var meetup_date_start      = new Date(2023,1,23,16,00,0) // in your local timezone # 0=January, 1=February, ...
-    // var meetup_date_end        = new Date(2023,1,23,17,00,0) // in your local timezone
-    // var meetup_date_timezone   = 'Europe/Amsterdam' // in context of UTC i.e. Amsterdam or Central European time is UTC + 1hr
     var meetup_date_start      = new Date('Feb 23 2023 16:00:00 GMT+1')
     var meetup_date_end        = new Date('Feb 23 2023 17:00:00 GMT+1')
 	var meetup_code_reference  = title_short + '-' + meetup_date_start.getFullYear() + '-' + (meetup_date_start.getMonth()+1) + '-' + meetup_date_start.getDate() + '.ics'  
-	var meetup_ics_hardlink    = 'https://github.com/lumcaimeetup/newsletter/blob/main/posts/ics/CAIRELab%20Meetup-2023-2-23.ics?raw=true'
+	
+    // var meetup_ics_hardlink    = 'https://downgit.github.io/#/home?url=https://github.com/lumcaimeetup/newsletter/blob/main/posts/ics/CAIRELab%20Meetup-2023-2-23.ics'
+    var meetup_ics_hardlink    = ''
     
     //// Step 2.4 - Meetup Dates
     var meetup_location        = "V-01-022 (Building 3, LUMC)"
@@ -623,9 +622,10 @@
 
     //// Step 2.5 - Meetup description  (Write this in readme format)
     var meetup_text            = `
-	External validation of radiomic studies is limited, although of utmost importance for the clinical implementation of radiomic models. The goal of this work is to build and externally validate a [18F]FDG PET radiomic model to predict overall survival in patients with head and neck squamous cell carcinoma (HNSCC).
+    Deep learning techniques show success in detecting objects in medical images, but still suffer from false-positive predictions. In literature, the estimated uncertainty of the neural network output has been shown to flag incorrect predictions. 
     <br/>
-	Two multicentre datasets of patients with operable HNSCC treated with neoadjuvant afatinib who underwent a baseline [18F]FDG PET/CT scan were included (EORTC 90111 trial: n=23, Unicancer Predictor trial: n=20). A Cox proportional hazards regression model using selected radiomic features and clinical characteristics (age and HPV status) was fitted on the training dataset and validated in the external validation set.
+    <br/>
+    We study the role played by features computed from neural network uncertainty estimates and shape-based features. An improvement is demonstrated in the lesion detection performance of the neural network for all uncertainty estimation methods on both abdominal MR and CT scans. 
     `
     
     //// Step 2.6 - Meetup online links
@@ -681,12 +681,34 @@
     document.getElementById('google_calendar').innerText = meetup_google_cal_text
     document.getElementById('google_calendar').href = meetup_google_cal_link
     
-	if (document.getElementById('ics_calendar').download !=  meetup_code_reference){
-		document.getElementById('ics_calendar').innerText = meetup_outlook_cal_text
-		document.getElementById('ics_calendar').href=meetup_outlook_cal_link
-		// document.getElementById('ics_calendar').download = title_short + '.ics'
-		document.getElementById('ics_calendar').download = meetup_code_reference
-	}
+    // Make link for Outlook calendar
+    document.getElementById('ics_calendar').innerText = meetup_outlook_cal_text
+    document.getElementById('ics_calendar').download = meetup_code_reference
+
+    var request = new XMLHttpRequest();  
+    request.open('GET', meetup_ics_hardlink, true);
+    request.onreadystatechange = function(){
+        console.log(' - [__main__] .ics status:" request.readyState: ', request.readyState)
+        if (request.readyState == 4){
+            console.log(' - [__main__] .ics status:" request.status: ', request.status)
+            if ((request.status == 404) || (request.status == 0 )) {  
+                document.getElementById('ics_calendar').href=meetup_outlook_cal_link
+                console.log(" [__ main__] meetup_ics_hardlink does not exist!");
+            }else{
+                document.getElementById('ics_calendar').href=meetup_ics_hardlink
+            }
+        }
+    };
+    request.send();
+
+	// if (document.getElementById('ics_calendar').download !=  meetup_code_reference){
+	// 	document.getElementById('ics_calendar').innerText = meetup_outlook_cal_text
+	// 	document.getElementById('ics_calendar').href=meetup_outlook_cal_link
+	// 	// document.getElementById('ics_calendar').download = title_short + '.ics'
+	// 	document.getElementById('ics_calendar').download = meetup_code_reference
+	// }else{
+    //     document.getElementById('ics_calendar').href=meetup_ics_hardlink
+    // }
     
 	
 
