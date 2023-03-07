@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:-//Test Cal//EN
+VERSION:2.0
+BEGIN:VEVENT
+ORGANIZER;CN=CAIRELab Medical AI Meetup:mailto:AI_Research_Meetings_LUMC@lumc.nl
+DTSTART;VALUE=DATE:2023-03-09T15:00:00.000Z
+DTEND;VALUE=DATE:2023-03-09T16:00:00.000Z
+SUMMARY:[CAIRELab Meetup] AI and medical liability
+X-ALT-DESC;FMTTYPE=text/html:<br/><b>AI and medical liability</b><br/><i>by Jan van Staalduinen<br/> ( Leiden University )</i><br/><br>Artificial intelligence is expected to play an increasingly important role in healthcare. This promises to bring numerous benefits, most notably faster and more accurate diagnosis and prognosis and treatments that can be tailored to the individual patient. It can, however, also introduce or enlarge a number of risks. The European Parliament identified seven: patient harm due to AI errors, misuse of medical AI tools, bias in AI and perpetuation of existing inequities, lack of transparency, privacy and security issues, gaps in accountability and obstacles in implementation. 
+    <br/>
+    <br/>
+    Especially considering the first risk, if an AI system does cause harm, there might be situations in which the patient can or should be able to recover damages from either the healthcare provider or the manufacturer of the system. In this meetup, we will discuss the basics of medical liability (including when dealing with AI systems), differences between neighboring countries and recent developments in EU legislation. No legal background knowledge is required.<br/><br/> -------- <br/><br/> <b>Location</b> : V-01-022 (Building 3, LUMC)<br/><br/> <b>Online</b>   : <a href=https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZTE5NTMxNmUtNGZlYy00ODRlLTk5ZTMtN2YwZjdhNzUwOWI1%40thread.v2/0?context=%7b%22Tid%22%3a%22c4048c4f-dd54-4cbd-8049-5457aacd2fb8%22%2c%22Oid%22%3a%22694e53f9-6c87-40be-8214-bc4bb52d8925%22%7d>Microsoft Teams Link</a><br/><br/> For more information refer our website: <a href=https://lumcaimeetup.github.io/?utm_source=newsletter&utm_medium=email&utm_campaign=WeeklyEmailList>www.lumcaimeetup.github.io</a><br/>
+LOCATION:V-01-022 (Building 3, LUMC)
+END:VEVENT
+END:VCALENDAR

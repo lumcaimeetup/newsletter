@@ -164,7 +164,7 @@
                 </i> 
                 OR 
                 <i>
-                    <a href="" , target="_blank"> Microsoft Teams</a>
+                    <a href="" , id="teams_link", target="_blank"> Microsoft Teams</a>
                 </i>
                 <br>
                 (
@@ -545,18 +545,6 @@
 
         var data = new File([text], { type: "text/plain" });
 		console.log(' - data: ', data)
-		
-		// let blob = new Blob([text], {type: 'text/plain'});
-		// console.log(' - blob: ', blob)
-		// let reader = new FileReader();
-		// reader.readAsDataURL(blob);
-		// console.log(reader.result)
-		// reader.onload = function() {
-		// 	console.log(reader.result)
-			// link.href = reader.result; // data url
-			// link.click();
-		// };
-		// console.log(window.URL.createObjectURL)
 
         // If we are replacing a previously generated file we need to
         // manually revoke the object URL to avoid memory leaks.
@@ -676,6 +664,9 @@
     document.getElementById('paragraph_date').children[0].innerText = formatDate(meetup_date_start)
     document.getElementById('paragraph_date').children[1].children[0].innerText = meetup_location
     document.getElementById('paragraph_date').children[1].children[0].href = meetup_location_link
+
+	document.getElementById('teams_link').innerText = meetup_online_text
+	document.getElementById('teams_link').href = meetup_online_link
     
     document.getElementById('google_calendar').innerText = meetup_google_cal_text
     document.getElementById('google_calendar').href = meetup_google_cal_link
