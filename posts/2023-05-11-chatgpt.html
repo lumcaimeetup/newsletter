@@ -162,6 +162,8 @@
                         V-01-022, Building 3, LUMC
                     </a>
                 </i> 
+
+                <i></i>
                  
                 <i>
                     <a href="" , id="teams_link", target="_blank"> 
@@ -715,6 +717,7 @@
 
     // Link for teams
     if (meetup_online_link.length > 0){
+        document.getElementById('paragraph_date').children[2].innerText = " OR "
         document.getElementById('teams_link').innerText = meetup_online_text
     	document.getElementById('teams_link').href = meetup_online_link
     }
