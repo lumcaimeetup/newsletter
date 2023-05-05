@@ -375,7 +375,7 @@
 
 			</tr>
 
-			<!-- LIST ITEM -->
+			<!-- STEFAN ROMEIJN -->
 			<tr style="cursor: pointer;">
 
 				<!-- LIST ITEM IMAGE -->
@@ -402,6 +402,37 @@
 						<b style="color: #333333;">Stephan Romeijn</b>
 						<br/>
 						AI Implementation Specialist, Radiology
+				</td>
+
+			</tr>
+
+            <!-- MARIEKE VAN BUCHEM -->
+			<tr style="cursor: pointer;">
+
+				<!-- LIST ITEM IMAGE -->
+				<!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2 -->
+				<td align="left" valign="top" style="border-collapse: collapse; border-spacing: 0;
+					padding-top: 30px;
+					padding-right: 20px;">
+					<a href='https://www.linkedin.com/in/marieke-van-buchem-7773ab133/'>
+						<img
+						border="0" vspace="0" hspace="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block;
+						color: #000000;"
+						src="https://media.licdn.com/dms/image/C4D03AQEJY-rpqpgcCQ/profile-displayphoto-shrink_200_200/0/1622204614113?e=1688601600&v=beta&t=1p8q_GhP5Tpzod_9m81ldijD3oa2fEqBVDgkmBIlEEA"
+						alt="D" title="Stephan Romeijn"
+						width="50" height="50">
+					</a>
+				</td>
+
+				<!-- LIST ITEM TEXT -->
+				<!-- Set text color and font family ("sans-serif" or "Georgia, serif"). Duplicate all text styles in links, including line-height -->
+				<td align="left" valign="top" style="font-size: 17px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;
+					padding-top: 25px;
+					color: #000000;
+					font-family: sans-serif;" class="paragraph">
+						<b style="color: #333333;">Marieke van Buchem</b>
+						<br/>
+						AI Innovation Manager, IT&DI
 				</td>
 
 			</tr>
@@ -591,16 +622,16 @@
     
     //// Step 2.1 - Meetup title
     var meetup_title           = "chatGPT in medical settings"
-	var meetup_websitelink     = "https://lumcaimeetup.github.io/2023/03/09/vanstaalduinen-AILiability.html"
-    var meetup_imagelink       = 'https://github.com/lumcaimeetup/newsletter/blob/main/images/law.jpg?raw=true'
+	var meetup_websitelink     = "https://lumcaimeetup.github.io/2023/05/11/chatgpt.html"
+    var meetup_imagelink       = 'https://github.com/lumcaimeetup/newsletter/blob/main/images/2023-05-11-chatgpt.png?raw=true'
     
     //// Step 2.2 - Meetup speaker
     var speaker_names           = ['Renzo Scholman', 'Liza King'] 
     var speaker_orgs            = ['Research Institute for Mathematics & Computer Science (CWI)','Autoscriber']
     
     //// Step 2.3 - Meetup dates
-    var meetup_date_start      = new Date('May 11 2023 16:00:00 GMT+1')
-    var meetup_date_end        = new Date('May 11 2023 17:00:00 GMT+1')
+    var meetup_date_start      = new Date('May 11 2023 16:00:00 GMT+2')
+    var meetup_date_end        = new Date('May 11 2023 17:00:00 GMT+2')
 	var meetup_code_reference  = title_short.replace(' ', '') + '-' + meetup_date_start.getFullYear() + '-' + (meetup_date_start.getMonth()+1) + '-' + meetup_date_start.getDate() + '.ics'  
 	
     //// Ignore for now
@@ -619,6 +650,8 @@
     Liza King will provide an overview of the challenges involved in applying generative AI to a medical setting. She will highlight how Autoscriber's AI pipeline has been designed to overcome these challenges. 
     <br/><br/>
     Afterwards, Renzo Scholman will offer a deeper understanding of the underlying mechanisms of large language models like (Chat)GPT and how they are trained. He will also explore the topic of privacy concerns when using these models in the medical domain, as well as alternative approaches.
+    <br/><br/>
+    Fnally, you can also take advantage of the chance to engage with other attendees while enjoying complimentary drinks.
     `
     
     //// Step 2.6 - Meetup online links
@@ -639,7 +672,7 @@
     var meetup_speaker_text    = "by "
 
     for (var i = 0; i < speaker_names.length; i++) {
-        meetup_speaker_text += speaker_names[i] + "<br/> (<i style='color:gray;'>" + speaker_orgs[i] + "</i> )"
+        meetup_speaker_text += speaker_names[i] + "<br/> <i style='color:gray;font-size=smaller;'>(" + speaker_orgs[i] + ")</i>"
         if (i == speaker_names.length - 2){
             meetup_speaker_text += "<br/> and <br/>"
         }
